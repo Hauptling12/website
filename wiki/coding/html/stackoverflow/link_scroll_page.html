@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+            <link rel="stylesheet" href="ass/css/index.css">
+        <title>docs wiki</title>
+        <style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+ol {
+  list-style-type: none;
+}
+
+</style>
+</head>
+<body>
+<div class="sidenav">
+  <a href="../../coding/index.html">Coding</a>
+  <a href="../../english/index.html">english</a>
+  <a href="../../hardware/index.html">hardware</a>
+  <a href="../../history/index.html">history</a>
+  <a href="../../math/index.html">math</a>
+  <a href="../../repair/index.html">repair</a>
+  <a href="../../server/index.html">server</a>
+  <a href="../../science/index.html">science</a>
+  <a href="../../software/index.html">software</a>
+  <a href="../tech/index.html">tech</a>
+  <a href="../../wikis/index.html">wikis</a>
+
+</div>
+<div class="main">
+        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+        <h1>HTML link scroll down the page</h1>
+        <pre class="prettyprint">
+&lt;div class="test"&gt;
+
+&lt;/div&gt;
+&lt;a href="#test"&gt;&lt;/a&gt;
+        </pre>
+        <p>change href="#test" to your div class </p>
+        <h1>SOURCES</h1>
+        <a href="https://stackoverflow.com/questions/30757877/html-link-scroll-down-the-page">https://stackoverflow.com/questions/30757877/html-link-scroll-down-the-page</a>
+</div>
+</body>
+</html>

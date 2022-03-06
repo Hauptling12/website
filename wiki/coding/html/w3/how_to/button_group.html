@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+            <link rel="stylesheet" href="../../../../../ass/css/index.css">
+        <title>docs wiki</title>
+        <style>
+.btn-group button {
+  background-color: #04AA6D; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
+.oi {
+        background-color:#59584E;
+}
+</style>
+</head>
+<body>
+<div class="sidenav">
+  <a href="../../../../coding/index.html">Coding</a>
+  <a href="../../../../english/index.html">english</a>
+  <a href="../../../../hardware/index.html">hardware</a>
+  <a href="../../../../history/index.html">history</a>
+  <a href="../../../../math/index.html">math</a>
+  <a href="../../../../repair/index.html">repair</a>
+  <a href="../../../../server/index.html">server</a>
+  <a href="../../../../science/index.html">science</a>
+  <a href="../../../../software/index.html">software</a>
+  <a href="../../../../tech/index.html">tech</a>
+  <a href="../../../../wikis/index.html">wikis</a>
+
+</div>
+<div class="main">
+        <h3>How TO - Button Group</h3>
+        <hr>
+        <p>
+Learn how to create a "button group" with CSS.
+        </p>
+        <hr>
+        <h2>Horizontal Button Groups</h2>
+        <p>Group a series of buttons together on a single line in a button group:</p>
+        <div class="btn-group" style="width:100%">
+  <button style="width:33.3%">Apple</button>
+  <button style="width:33.3%">Samsung</button>
+  <button style="width:33.3%">Sony</button>
+</div>
+
+<div class="btn-group">
+  <button>Apple</button>
+  <button>Samsung</button>
+  <button>Sony</button>
+</div>
+<hr>
+<h2>How To Create a Button Group</h2>
+<h3>Step 1) Add HTML:</h3>
+<h4>example</h4>
+<div class="oi">
+        <pre class="prettyprint">
+ &lt;div class="btn-group"&gt;
+  &lt;button&gt;Apple&lt;/button&gt;
+  &lt;button&gt;Samsung&lt;/button&gt;
+  &lt;button&gt;Sony&lt;/button&gt;
+&lt;/div&gt; 
+        </pre>
+</div>
+<h3>Step 1) Add CSS:</h3>
+<h3>Example</h3>
+<div class="oi">
+        <pre class="prettyprint">
+.btn-group button {
+  background-color: #04AA6D; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
+        </pre>
+</div>
+<h1>Justified / Full-width Button Group:</h1>
+<h4>example</h4>
+<div class="oi">
+        <pre class="prettyprint">
+ &lt;!-- Three buttons in a group --&gt;
+&lt;div class="btn-group" style="width:100%"&gt;
+  &lt;button style="width:33.3%"&gt;Apple&lt;/button&gt;
+  &lt;button style="width:33.3%"&gt;Samsung&lt;/button&gt;
+  &lt;button style="width:33.3%"&gt;Sony&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Four buttons in a group --&gt;
+&lt;div class="btn-group" style="width:100%"&gt;
+  &lt;button style="width:25%"&gt;Apple&lt;/button&gt;
+  &lt;button style="width:25%"&gt;Samsung&lt;/button&gt;
+  &lt;button style="width:25%"&gt;Sony&lt;/button&gt;
+  &lt;button style="width:25%"&gt;HTC&lt;/button&gt;
+&lt;/div&gt; 
+
+        </pre>
+</div>
+
+</div>
+</body>
+<script src="../../../../../ass/api/code-prettify/loader/run_prettify.js"></script>
+</html>

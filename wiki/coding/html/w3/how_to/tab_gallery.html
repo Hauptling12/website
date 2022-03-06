@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+            <link rel="stylesheet" href="../../../../../ass/css/index.css">
+        <title>docs wiki</title>
+        <style>
+.oi {
+        background-color:#59584E;
+}
+</style>
+</head>
+<body>
+<div class="sidenav">
+  <a href="../../../../coding/index.html">Coding</a>
+  <a href="../../../../english/index.html">english</a>
+  <a href="../../../../hardware/index.html">hardware</a>
+  <a href="../../../../history/index.html">history</a>
+  <a href="../../../../math/index.html">math</a>
+  <a href="../../../../repair/index.html">repair</a>
+  <a href="../../../../server/index.html">server</a>
+  <a href="../../../../science/index.html">science</a>
+  <a href="../../../../software/index.html">software</a>
+  <a href="../../../../tech/index.html">tech</a>
+  <a href="../../../../wikis/index.html">wikis</a>
+
+</div>
+<div class="main">
+        <h3>How TO - Tab Gallery</h3>
+        <hr>
+        <p>
+Learn how to create a tabbed image gallery with CSS and JavaScript.
+        </p>
+        <hr>
+        <h2>Tab Gallery</h2>
+        <p>Click on an image to expand it:</p>
+        <style>
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+        </style>
+<!-- The four columns -->
+<div class="row">
+  <div class="column">
+    <img src="../../../../../ass/png/w3-img_nature.jpg" alt="Nature" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="../../../../../ass/png/w3_school_img_snow.jpg" alt="Snow" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="../../../../../ass/png/w3-img_mountains.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="../../../../../ass/png/w3-img_lights.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
+  </div>
+</div>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:100%">
+  <div id="imgtext"></div>
+</div>
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+<hr>
+<h2>Create a Tab Gallery</h2>
+<h3>Step 1) Add HTML:</h3>
+<h4>Example</h4>
+<div class="oi">
+        <pre class="prettyprint">
+ &lt;!-- The grid: four columns --&gt;
+&lt;div class="row"&gt;
+  &lt;div class="column"&gt;
+    &lt;img src="img_nature.jpg" alt="Nature" onclick="myFunction(this);"&gt;
+  &lt;/div&gt;
+  &lt;div class="column"&gt;
+    &lt;img src="img_snow.jpg" alt="Snow" onclick="myFunction(this);"&gt;
+  &lt;/div&gt;
+  &lt;div class="column"&gt;
+    &lt;img src="img_mountains.jpg" alt="Mountains" onclick="myFunction(this);"&gt;
+  &lt;/div&gt;
+  &lt;div class="column"&gt;
+    &lt;img src="img_lights.jpg" alt="Lights" onclick="myFunction(this);"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- The expanding image container --&gt;
+&lt;div class="container"&gt;
+  &lt;!-- Close the image --&gt;
+  &lt;span onclick="this.parentElement.style.display='none'" class="closebtn"&gt;&times;&lt;/span&gt;
+
+  &lt;!-- Expanded image --&gt;
+  &lt;img id="expandedImg" style="width:100%"&gt;
+
+  &lt;!-- Image text --&gt;
+  &lt;div id="imgtext"&gt;&lt;/div&gt;
+&lt;/div&gt; 
+
+        </pre>
+</div>
+<p>Use images to expand the specific image. The image that is clicked on inside the column, is shown in a container below the columns. </p>
+<hr>
+<h3>Step 1) Add CSS:</h3>
+<p>Create four columns and style the images:</p>
+<h3>Example</h3>
+<div class="oi">
+        <pre class="prettyprint">
+ /* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container (positioning is needed to position the close button and the text) */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+} 
+        </pre>
+</div>
+<h3>Step 3) Add JavaScript:</h3>
+<h4>Example</h4>
+<div class="oi">
+        <pre class="prettyprint">
+        function myFunction(imgs) {
+  // Get the expanded image
+  var expandImg = document.getElementById("expandedImg");
+  // Get the image text
+  var imgText = document.getElementById("imgtext");
+  // Use the same src in the expanded image as the image being clicked on from the grid
+  expandImg.src = imgs.src;
+  // Use the value of the alt attribute of the clickable image as text inside the expanded image
+  imgText.innerHTML = imgs.alt;
+  // Show the container element (hidden with CSS)
+  expandImg.parentElement.style.display = "block";
+}
+        </pre>
+</div>
+</div>
+</body>
+<script src="../../../../../ass/api/code-prettify/loader/run_prettify.js"></script>
+</html>

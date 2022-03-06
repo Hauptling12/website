@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+            <link rel="stylesheet" href="../../../../../ass/css/index.css">
+        <title>docs wiki</title>
+        <style>
+
+</style>
+</head>
+<body>
+<div class="sidenav">
+  <a href="../../../../coding/index.html">Coding</a>
+  <a href="../../../../english/index.html">english</a>
+  <a href="../../../../hardware/index.html">hardware</a>
+  <a href="../../../../history/index.html">history</a>
+  <a href="../../../../math/index.html">math</a>
+  <a href="../../../../repair/index.html">repair</a>
+  <a href="../../../../server/index.html">server</a>
+  <a href="../../../../science/index.html">science</a>
+  <a href="../../../../software/index.html">software</a>
+  <a href="../../../../tech/index.html">tech</a>
+  <a href="../../../../wikis/index.html">wikis</a>
+
+</div>
+<div class="main">
+        <h3>How TO - Sort a List</h3>
+        <hr>
+        <p>
+Learn how to sort an HTML list, using JavaScript.
+        </p>
+        <hr>
+        <p>Click the button to sort the list alphabetically:</p>
+<button onclick="sortList()">Sort</button>
+
+<ul id="id01">
+  <li>Oslo</li>
+  <li>Stockholm</li>
+  <li>Helsinki</li>
+  <li>Berlin</li>
+  <li>Rome</li>
+  <li>Madrid</li>
+</ul>
+
+<script>
+function sortList() {
+  var list, i, switching, b, shouldSwitch;
+  list = document.getElementById("id01");
+  switching = true;
+  /* Make a loop that will continue until
+  no switching has been done: */
+  while (switching) {
+    // start by saying: no switching is done:
+    switching = false;
+    b = list.getElementsByTagName("LI");
+    // Loop through all list-items:
+    for (i = 0; i < (b.length - 1); i++) {
+      // start by saying there should be no switching:
+      shouldSwitch = false;
+      /* check if the next item should
+      switch place with the current item: */
+      if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
+        /* if next item is alphabetically
+        lower than current item, mark as a switch
+        and break the loop: */
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      /* If a switch has been marked, make the switch
+      and mark the switch as done: */
+      b[i].parentNode.insertBefore(b[i + 1], b[i]);
+      switching = true;
+    }
+  }
+}
+</script>
+        <hr>
+<h2>Creating a Sort Function</h2>
+<h4>Example</h4>
+<div>
+        <pre class="prettyprint">
+&lt;ul id="id01"&gt;
+  &lt;li&gt;Oslo&lt;/li&gt;
+  &lt;li&gt;Stockholm&lt;/li&gt;
+  &lt;li&gt;Helsinki&lt;/li&gt;
+  &lt;li&gt;Berlin&lt;/li&gt;
+  &lt;li&gt;Rome&lt;/li&gt;
+  &lt;li&gt;Madrid&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script&gt;
+function sortList() {
+  var list, i, switching, b, shouldSwitch;
+  list = document.getElementById("id01");
+  switching = true;
+  /* Make a loop that will continue until
+  no switching has been done: */
+  while (switching) {
+    // Start by saying: no switching is done:
+    switching = false;
+    b = list.getElementsByTagName("LI");
+    // Loop through all list items:
+    for (i = 0; i &lt; (b.length - 1); i++) {
+      // Start by saying there should be no switching:
+      shouldSwitch = false;
+      /* Check if the next item should
+      switch place with the current item: */
+      if (b[i].innerHTML.toLowerCase() &gt; b[i + 1].innerHTML.toLowerCase()) {
+        /* If next item is alphabetically lower than current item,
+        mark as a switch and break the loop: */
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      /* If a switch has been marked, make the switch
+      and mark the switch as done: */
+      b[i].parentNode.insertBefore(b[i + 1], b[i]);
+      switching = true;
+    }
+  }
+}
+&lt;/script&gt;
+        </pre>
+</div>
+<h2>Sorting Ascending and Descending</h2>
+<p>The first time you click the button, the sorting direction is ascending (A to Z).</p>
+<p>Click again, and the sorting direction will be descending (Z to A):</p>
+
+<button onclick="sortListDir()">Sort</button>
+
+<ul id="id02">
+  <li>Oslo</li>
+  <li>Stockholm</li>
+  <li>Helsinki</li>
+  <li>Berlin</li>
+  <li>Rome</li>
+  <li>Madrid</li>
+</ul>
+<script>
+function sortListDir() {
+  var list, i, switching, b, shouldSwitch, dir, switchcount = 0;
+  list = document.getElementById("id02");
+  switching = true;
+  //Set the sorting direction to ascending:
+  dir = "asc"; 
+  //Make a loop that will continue until no switching has been done:
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    b = list.getElementsByTagName("LI");
+    //Loop through all list-items:
+    for (i = 0; i < (b.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      //check if the next item should switch place with the current item, based on the sorting direction (asc or desc):
+      if (dir == "asc") {
+        if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
+          //if the next item is alphabetically lower than this item, mark as a switch and break the loop:
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (b[i].innerHTML.toLowerCase() < b[i + 1].innerHTML.toLowerCase()) {
+          //if the next item is alphabetically higher than this item, mark as a switch and break the loop:
+          shouldSwitch= true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      //If a switch has been marked, make the switch and mark that a switch has been done:
+      b[i].parentNode.insertBefore(b[i + 1], b[i]);
+      switching = true;
+      //Each time a switch is done, increase this count by 1:
+      switchcount ++;
+    } else {
+      //If no switched has been done AND the direction is "asc", set the direction to "desc" and run the while loop again.
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+</script>
+
+<h3>Example</h3>
+<div>
+        <pre class="prettyprint">
+&lt;ul id="id01"&gt;
+  &lt;li&gt;Oslo&lt;/li&gt;
+  &lt;li&gt;Stockholm&lt;/li&gt;
+  &lt;li&gt;Helsinki&lt;/li&gt;
+  &lt;li&gt;Berlin&lt;/li&gt;
+  &lt;li&gt;Rome&lt;/li&gt;
+  &lt;li&gt;Madrid&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script&gt;
+function sortListDir() {
+  var list, i, switching, b, shouldSwitch, dir, switchcount = 0;
+  list = document.getElementById("id01");
+  switching = true;
+  // Set the sorting direction to ascending:
+  dir = "asc";
+  // Make a loop that will continue until no switching has been done:
+  while (switching) {
+    // Start by saying: no switching is done:
+    switching = false;
+    b = list.getElementsByTagName("LI");
+    // Loop through all list-items:
+    for (i = 0; i &lt; (b.length - 1); i++) {
+      // Start by saying there should be no switching:
+      shouldSwitch = false;
+      /* Check if the next item should switch place with the current item,
+      based on the sorting direction (asc or desc): */
+      if (dir == "asc") {
+        if (b[i].innerHTML.toLowerCase() &gt; b[i + 1].innerHTML.toLowerCase()) {
+          /* If next item is alphabetically lower than current item,
+          mark as a switch and break the loop: */
+          shouldSwitch = true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (b[i].innerHTML.toLowerCase() &lt; b[i + 1].innerHTML.toLowerCase()) {
+          /* If next item is alphabetically higher than current item,
+          mark as a switch and break the loop: */
+          shouldSwitch= true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /* If a switch has been marked, make the switch
+      and mark that a switch has been done: */
+      b[i].parentNode.insertBefore(b[i + 1], b[i]);
+      switching = true;
+      // Each time a switch is done, increase switchcount by 1:
+      switchcount ++;
+    } else {
+      /* If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again. */
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+&lt;/script&gt;
+        </pre>
+</div>
+<h2>Sort List Numerically</h2>
+<div>
+        <pre class="prettyprint">
+if (Number(b[i].innerHTML) > Number(b[i + 1].innerHTML)) {
+  shouldSwitch =  true;
+  break;
+}
+        </pre>
+</div>
+</div>
+</body>
+<script src="../../../../../ass/api/code-prettify/loader/run_prettify.js"></script>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+            <link rel="stylesheet" href="../../../../../ass/css/index.css">
+        <title>docs wiki</title>
+        <style>
+.oi {
+        background-color:#59584E;
+}
+</style>
+</head>
+<body>
+<div class="sidenav">
+  <a href="../../../../coding/index.html">Coding</a>
+  <a href="../../../../english/index.html">english</a>
+  <a href="../../../../hardware/index.html">hardware</a>
+  <a href="../../../../history/index.html">history</a>
+  <a href="../../../../math/index.html">math</a>
+  <a href="../../../../repair/index.html">repair</a>
+  <a href="../../../../server/index.html">server</a>
+  <a href="../../../../science/index.html">science</a>
+  <a href="../../../../software/index.html">software</a>
+  <a href="../../../../tech/index.html">tech</a>
+  <a href="../../../../wikis/index.html">wikis</a>
+
+</div>
+<div class="main">
+        <h3>How TO - Trigger Button Click on Enter</h3>
+        <hr>
+        <p>
+Trigger a button click on keyboard "enter" with JavaScript.
+        </p>
+        <hr>
+        <h2>Trigger a Button Click on Enter</h2>
+        <p>Press the "Enter" key inside the input field to trigger the button:</p>
+<input id="myInput" value="Some text..">
+<button id="myBtn" onclick="javascript:alert('Hello World!')">Button</button>
+
+<script>
+var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("myBtn").click();
+  }
+});
+</script>
+        <h4>Example</h4>
+<div class="oi">
+        <pre class="prettyprint">
+// Get the input field
+var input = document.getElementById("myInput");
+
+// Execute a function when the user releases a key on the keyboard
+input.addEventListener("keyup", function(event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    document.getElementById("myBtn").click();
+  }
+}); 
+        </pre>
+</div>
+</div>
+</body>
+<script src="../../../../../ass/api/code-prettify/loader/run_prettify.js"></script>
+</html>

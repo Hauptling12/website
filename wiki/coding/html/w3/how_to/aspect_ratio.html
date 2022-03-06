@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+            <link rel="stylesheet" href="../../../../../ass/css/index.css">
+        <title>docs wiki</title>
+        <style>
+.oi {
+        background-color:#59584E;
+}
+.w3-note{background-color:#ffffcc;border-left:6px solid #ffeb3b}
+.w3-panel{padding:0.01em 16px}.w3-panel{margin-top:16px;margin-bottom:16px}
+</style>
+</head>
+<body>
+<div class="sidenav">
+  <a href="../../coding/index.html">Coding</a>
+  <a href="../../english/index.html">english</a>
+  <a href="../../hardware/index.html">hardware</a>
+  <a href="../../history/index.html">history</a>
+  <a href="../../math/index.html">math</a>
+  <a href="../../repair/index.html">repair</a>
+  <a href="../../server/index.html">server</a>
+  <a href="../../science/index.html">science</a>
+  <a href="../../software/index.html">software</a>
+  <a href="../../tech/index.html">tech</a>
+  <a href="../../wikis/index.html">wikis</a>
+
+</div>
+<div class="main">
+        <h3>How TO - Aspect Ratio</h3>
+        <hr>
+        <p>
+Learn how to maintain the aspect ratio of an element with CSS.
+        </p>
+        <hr>
+        <h3>Aspect Ratio</h3>
+        <p>Create flexible elements that keep their aspect ratio (4:3, 16:9, etc.) when resized:</p>
+        <img src="../../../../../ass/png/w3-aspect_ratio.png" style="max-width:100%;display:block;margin:auto">
+        <div class="w3-panel w3-note">
+<p><strong>What is aspect ratio?</strong> <br><br>The aspect ratio of an element
+describes the proportional relationship between its width and its height. Two common video aspect ratios are 4:3
+(the universal video format of the 20th
+century), and 16:9 (universal for HD television and European digital
+television, and default for YouTube videos).</p>
+</div>
+<hr>
+<h2>How To - Height Equal to Width</h2>
+<h3>Step 1) Add HTML:</h3>
+<p>Use a container element, like &lt;div&gt;, and if you want text inside of it, add a child element:</p>
+<h4>Example</h4>
+<div style="background-color:#59584E;">
+        <pre>
+&lt;div class="container"&gt;
+  &lt;div class="text"&gt;Some text&lt;/div&gt; &lt;!-- If you want text inside the container --&gt;
+&lt;/div&gt;
+        </pre>
+</div>
+<h3>Step 2) Add CSS:</h3>
+<p>Add a percentage value for <code style="color:darkred;">padding-top</code> to maintain the aspect ratio of the DIV. The following example will create an aspect ratio of 1:1 (the height and width is always equal):</p>
+<h4>Example 1:1 Aspect Ratio</h4>
+<div class="oi">
+        <pre>
+.container {
+  background-color: red;
+  width: 100%;
+  padding-top: 100%; /* 1:1 Aspect Ratio */
+  position: relative; /* If you want text inside of it */
+}
+
+/* If you want text inside of the container */
+.text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+        </pre>
+</div>
+
+<p>Other aspect ratios:</p>
+<h4>Example 16:9 Aspect Ratio</h4>
+<div class="oi">
+        <pre>
+ .container {
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+        </pre>
+</div>
+
+<h4>Example 4:3 Aspect Ratio</h4>
+<div class="oi">
+        <pre>
+.container {
+  padding-top: 75%; /* 4:3 Aspect Ratio (divide 3 by 4 = 0.75) */
+}
+        </pre>
+</div>
+
+<h4>Example 3:2 Aspect Ratio</h4>
+<div class="oi">
+        <pre>
+.container {
+  padding-top: 66.66%; /* 3:2 Aspect Ratio (divide 2 by 3 = 0.6666)  */
+}
+        </pre>
+</div>
+
+<h4>Example 8:5 Aspect Ratio</h4>
+<div class="oi">
+        <pre>
+.container {
+  padding-top: 62.5%; /* 8:5 Aspect Ratio (divide 5 by 8 = 0.625) */
+}
+        </pre>
+</div>
+</div>
+</body>
+</html>

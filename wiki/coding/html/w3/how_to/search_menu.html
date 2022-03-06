@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+            <link rel="stylesheet" href="../../../../../ass/css/index.css">
+        <title>docs wiki</title>
+        <style>
+
+</style>
+</head>
+<body>
+<div class="sidenav">
+  <a href="../../../../coding/index.html">Coding</a>
+  <a href="../../../../english/index.html">english</a>
+  <a href="../../../../hardware/index.html">hardware</a>
+  <a href="../../../../history/index.html">history</a>
+  <a href="../../../../math/index.html">math</a>
+  <a href="../../../../repair/index.html">repair</a>
+  <a href="../../../../server/index.html">server</a>
+  <a href="../../../../science/index.html">science</a>
+  <a href="../../../../software/index.html">software</a>
+  <a href="../../../../tech/index.html">tech</a>
+  <a href="../../../../wikis/index.html">wikis</a>
+
+</div>
+<div class="main">
+        <h3>How TO - Search Menu</h3>
+        <hr>
+        <p>
+Learn how to create a search menu to filter links with JavaScript.
+        </p>
+        <hr>
+        <h2>Search/Filter Menu</h2>
+        <p>How to search for links in a navigation menu:</p>
+        <style>
+       .row {
+  display: flex;
+}
+
+/* Left column (menu) */
+.left {
+  flex: 35%;
+  padding: 15px 0;
+}
+
+.left h2 {
+  padding-left: 8px;
+}
+
+/* Right column (page content) */
+.right {
+  flex: 65%;
+  padding: 15px;
+}
+
+/* Style the search box */
+#mySearch {
+  width: 100%;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid #ddd;
+}
+
+/* Style the navigation menu inside the left column */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  display: block
+}
+
+#myMenu li a:hover {
+  background-color: #eee;
+} 
+        </style>
+        <div class="row">
+  <div class="left" style="background-color:#bbb;">
+    <h2>Menu</h2>
+    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+    <ul id="myMenu">
+      <li><a href="#">HTML</a></li>
+      <li><a href="#">CSS</a></li>
+      <li><a href="#">JavaScript</a></li>
+      <li><a href="#">PHP</a></li>
+      <li><a href="#">Python</a></li>
+      <li><a href="#">jQuery</a></li>
+      <li><a href="#">SQL</a></li>
+      <li><a href="#">Bootstrap</a></li>
+      <li><a href="#">Node.js</a></li>
+    </ul>
+  </div>
+
+  <div class="right" style="background-color:#ddd;">
+    <h2>Page Content</h2>
+    <p>Start to type for a specific category inside the search bar to "filter" the search options.</p>
+    <p>Some text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+    <p>Some other text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+    <p>Some text..</p>
+  </div>
+</div>
+
+<script>
+function myFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myMenu");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+        <hr>
+<h2>Create A Search Menu</h2>
+<h3>Step 1) Add HTML:</h3>
+<h4>Example</h4>
+<div>
+        <pre class="prettyprint">
+&lt;input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category"&gt;
+
+&lt;ul id="myMenu"&gt;
+  &lt;li&gt;&lt;a href="#"&gt;HTML&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;CSS&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;JavaScript&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;PHP&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Python&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;jQuery&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;SQL&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Bootstrap&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Node.js&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+        </pre>
+</div>
+<p><strong>Note</strong>: We use href="#" in this demo since we do not have a page to link it to. In real life this should be a real URL to a specific page.</p><hr>
+<h3>Step 2) Add CSS:</h3>
+<p>Style the search box and the navigation menu:</p>
+<h3>Example</h3>
+<div>
+        <pre class="prettyprint">
+ /* Style the search box */
+#mySearch {
+  width: 100%;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid #ddd;
+}
+
+/* Style the navigation menu */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style the navigation links */
+#myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  display: block
+}
+
+#myMenu li a:hover {
+  background-color: #eee;
+} 
+        </pre>
+</div>
+<h3>Step 3) Add JavaScript:</h3>
+<h4>Example</h4>
+<div>
+        <pre class="prettyprint">
+&lt;script&gt;
+function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myMenu");
+  li = ul.getElementsByTagName("li");
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i &lt; li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) &gt; -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+&lt;/script&gt;
+        </pre>
+</div>
+</div>
+</body>
+<script src="../../../../../ass/api/code-prettify/loader/run_prettify.js"></script>
+</html>

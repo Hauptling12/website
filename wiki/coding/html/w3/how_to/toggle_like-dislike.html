@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+            <link rel="stylesheet" href="../../../../../ass/css/index.css">
+<!--            <link rel="stylesheet" href="../../../../../ass/font/css/all.min.css">
+-->    <title>docs wiki</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.oi {
+        background-color:#59584E;
+}
+.fa {
+  font-size: 50px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fa:hover {
+  color: darkblue;
+}
+</style>
+</head>
+<body>
+<div class="sidenav">
+  <a href="../../../../coding/index.html">Coding</a>
+  <a href="../../../../english/index.html">english</a>
+  <a href="../../../../hardware/index.html">hardware</a>
+  <a href="../../../../history/index.html">history</a>
+  <a href="../../../../math/index.html">math</a>
+  <a href="../../../../repair/index.html">repair</a>
+  <a href="../../../../server/index.html">server</a>
+  <a href="../../../../science/index.html">science</a>
+  <a href="../../../../software/index.html">software</a>
+  <a href="../../../../tech/index.html">tech</a>
+  <a href="../../../../wikis/index.html">wikis</a>
+
+</div>
+<div class="main">
+        <h3>How TO - Toggle Like and Dislike</h3>
+        <hr>
+        <p>
+Toggle between a like/dislike button with CSS and JavaScript.
+        </p>
+        <hr>
+        <p>Click on the icon to toggle between thumbs-up and thumbs-down (like/dislike):</p>
+<i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+<script>
+function myFunction(x) {
+  x.classList.toggle("fa-thumbs-down");
+}
+</script>
+        <hr>
+<h2>Toggle (Hide/Show) an Element</h2>
+<h3>Step 1) Add HTML:</h3>
+<h4>Example</h4>
+<div class="oi">
+        <pre class="prettyprint">
+ &lt;!-- Add icon library --&gt;
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"&gt;
+
+&lt;!-- Use an element to toggle between a like/dislike icon --&gt;
+&lt;i onclick="myFunction(this)" class="fa fa-thumbs-up"&gt;&lt;/i&gt; 
+        </pre>
+</div>
+<h3>Step 1) Add JavaScript:</h3>
+<h3>Example</h3>
+<div class="oi">
+        <pre class="prettyprint">
+function myFunction(x) {
+  x.classList.toggle("fa-thumbs-down");
+} 
+        </pre>
+</div>
+</div>
+</body>
+<script src="../../../../../ass/api/code-prettify/loader/run_prettify.js"></script>
+</html>

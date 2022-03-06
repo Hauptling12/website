@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+            <link rel="stylesheet" href="../../../../../ass/css/index.css">
+        <title>docs wiki</title>
+        <style>
+
+</style>
+</head>
+<body>
+<div class="sidenav">
+  <a href="../../../../coding/index.html">Coding</a>
+  <a href="../../../../english/index.html">english</a>
+  <a href="../../../../hardware/index.html">hardware</a>
+  <a href="../../../../history/index.html">history</a>
+  <a href="../../../../math/index.html">math</a>
+  <a href="../../../../repair/index.html">repair</a>
+  <a href="../../../../server/index.html">server</a>
+  <a href="../../../../science/index.html">science</a>
+  <a href="../../../../software/index.html">software</a>
+  <a href="../../../../tech/index.html">tech</a>
+  <a href="../../../../wikis/index.html">wikis</a>
+
+</div>
+<div class="main">
+        <h3>How TO - Stacked Form</h3>
+        <hr>
+        <p>
+Learn how to create a stacked form with CSS.
+        </p>
+        <hr>
+        <h2>Stacked Form</h2>
+        <p>A vertically stacked form (where inputs and labels are placed on top of each other, instead of next to each other):</p>
+        <style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+        </style>
+        <div class="container">
+  <form action="/action_page.php">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+        <hr>
+<h2>How To Create a Stacked Form</h2>
+<h3>Step 1) Add HTML:</h3>
+<p>Use a &lt;form&gt; element to process the input. You can learn more about this in our PHP tutorial. <br>Add inputs (with a matching label) for each field:</p>
+<h4>Example</h4>
+<div>
+        <pre class="prettyprint">
+ &lt;form action="/action_page.php"&gt;
+  &lt;label for="fname"&gt;First Name&lt;/label&gt;
+  &lt;input type="text" id="fname" name="firstname" placeholder="Your name.."&gt;
+
+  &lt;label for="lname"&gt;Last Name&lt;/label&gt;
+  &lt;input type="text" id="lname" name="lastname" placeholder="Your last name.."&gt;
+
+  &lt;label for="country"&gt;Country&lt;/label&gt;
+  &lt;select id="country" name="country"&gt;
+    &lt;option value="australia"&gt;Australia&lt;/option&gt;
+    &lt;option value="canada"&gt;Canada&lt;/option&gt;
+    &lt;option value="usa"&gt;USA&lt;/option&gt;
+  &lt;/select&gt;
+
+  &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;
+
+        </pre>
+</div>
+<h3>Step 2) Add CSS:</h3>
+<h3>Example</h3>
+<div>
+        <pre class="prettyprint">
+ /* Style inputs */
+  input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  width: 100%;
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Add a background color to the submit button on mouse-over */
+input[type=submit]:hover {
+  background-color: #45a049;
+} 
+        </pre>
+</div>
+</div>
+</body>
+<script src="../../../../../ass/api/code-prettify/loader/run_prettify.js"></script>
+</html>

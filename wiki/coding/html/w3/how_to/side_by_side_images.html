@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+            <link rel="stylesheet" href="../../../../../ass/css/index.css">
+        <title>docs wiki</title>
+        <style>
+
+</style>
+</head>
+<body>
+<div class="sidenav">
+  <a href="../../../../coding/index.html">Coding</a>
+  <a href="../../../../english/index.html">english</a>
+  <a href="../../../../hardware/index.html">hardware</a>
+  <a href="../../../../history/index.html">history</a>
+  <a href="../../../../math/index.html">math</a>
+  <a href="../../../../repair/index.html">repair</a>
+  <a href="../../../../server/index.html">server</a>
+  <a href="../../../../science/index.html">science</a>
+  <a href="../../../../software/index.html">software</a>
+  <a href="../../../../tech/index.html">tech</a>
+  <a href="../../../../wikis/index.html">wikis</a>
+
+</div>
+<div class="main">
+        <h3>How TO - Align Images Side By Side</h3>
+        <hr>
+        <p>
+Learn how to align images side by side with CSS.
+        </p>
+        <hr>
+        <p>Side-by-Side Image Gallery</p>
+        <style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+<div class="row">
+  <div class="column">
+    <img src="../../../../../ass/png/w3_school_img_snow.jpg" alt="Snow" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="../../../../../ass/png/w3-img_nature.jpg" alt="Forest" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="../../../../../ass/png/w3-img_mountains.jpg" alt="Mountains" style="width:100%">
+  </div>
+</div>
+        <hr>
+<h2>How To Place Images Side by Side</h2>
+<h3>Step 1) Add HTML:</h3>
+<h4>Example</h4>
+<div>
+        <pre class="prettyprint">
+ &lt;div class="row"&gt;
+  &lt;div class="column"&gt;
+    &lt;img src="img_snow.jpg" alt="Snow" style="width:100%"&gt;
+  &lt;/div&gt;
+  &lt;div class="column"&gt;
+    &lt;img src="img_forest.jpg" alt="Forest" style="width:100%"&gt;
+  &lt;/div&gt;
+  &lt;div class="column"&gt;
+    &lt;img src="img_mountains.jpg" alt="Mountains" style="width:100%"&gt;
+  &lt;/div&gt;
+&lt;/div&gt; 
+
+        </pre>
+</div>
+<h3>Step 2) Add CSS:</h3>
+<p>How to create side-by-side images with the CSS <code style="color:darkred">float</code> property:</p>
+<h3>Float Example</h3>
+<div>
+        <pre class="prettyprint">
+ /* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+} 
+        </pre>
+</div>
+<p>How to create side-by-side images with the CSS <code style="color:darkred">flex</code> property:</p>
+<h4>Flexbox Example</h4>
+<div>
+        <pre class="prettyprint">
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+        </pre>
+</div>
+</div>
+</body>
+<script src="../../../../../ass/api/code-prettify/loader/run_prettify.js"></script>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+            <link rel="stylesheet" href="../../../../../ass/css/index.css">
+        <title>docs wiki</title>
+        <style>
+.oi {
+        background-color:#59584E;
+}
+
+.nogrey {
+}
+.greyscal {
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+</style>
+</head>
+<body>
+<div class="sidenav">
+  <a href="../../../../coding/index.html">Coding</a>
+  <a href="../../../../english/index.html">english</a>
+  <a href="../../../../hardware/index.html">hardware</a>
+  <a href="../../../../history/index.html">history</a>
+  <a href="../../../../math/index.html">math</a>
+  <a href="../../../../repair/index.html">repair</a>
+  <a href="../../../../server/index.html">server</a>
+  <a href="../../../../science/index.html">science</a>
+  <a href="../../../../software/index.html">software</a>
+  <a href="../../../../tech/index.html">tech</a>
+  <a href="../../../../wikis/index.html">wikis</a>
+
+</div>
+<div class="main">
+        <h3>How TO - Black and White Images</h3>
+        <hr>
+        <p>
+Learn how to create a "black and white" image with CSS.
+        </p>
+        <hr>
+        <h2>Black and White Image</h2>
+        <table>
+                <tr>
+                        <th>Original image</th>
+                        <th>grayscale(100%)</th>
+                </tr>
+                <tr>
+                        <td>
+                                <img src="../../../../../ass/png/w3-pineapple.jpg" alt="pineapple" style="width:100%;" class="nogrey">    
+                                <img src="../../../../../ass/png/w3-pineapple.jpg" alt="pineapple" style="width:100%;" class="greyscal">
+                        </td>
+                </tr>
+        </table>
+        <p>Use the CSS <code style="color:darkred;">filter</code> property to convert an image to black and white.</p>
+<hr>
+<h3>Grayscale Example</h3>
+<p>Change the color of all images to black and white (100% gray):</p>
+<div class="oi">
+        <pre class="prettyprint">
+img {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+        </pre>
+</div>
+</div>
+</body>
+<script src="../../../../../ass/api/code-prettify/loader/run_prettify.js"></script>
+</html>

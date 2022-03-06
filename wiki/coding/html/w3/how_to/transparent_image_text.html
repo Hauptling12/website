@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+            <link rel="stylesheet" href="../../../../../ass/css/index.css">
+        <title>docs wiki</title>
+        <style>
+.oi {
+        background-color:#59584E;
+}
+</style>
+</head>
+<body>
+<div class="sidenav">
+  <a href="../../../../coding/index.html">Coding</a>
+  <a href="../../../../english/index.html">english</a>
+  <a href="../../../../hardware/index.html">hardware</a>
+  <a href="../../../../history/index.html">history</a>
+  <a href="../../../../math/index.html">math</a>
+  <a href="../../../../repair/index.html">repair</a>
+  <a href="../../../../server/index.html">server</a>
+  <a href="../../../../science/index.html">science</a>
+  <a href="../../../../software/index.html">software</a>
+  <a href="../../../../tech/index.html">tech</a>
+  <a href="../../../../wikis/index.html">wikis</a>
+
+</div>
+<div class="main">
+        <h3>How TO - Image with Transparent Text</h3>
+        <hr>
+        <p>
+Learn how to create an image with a transparent (see-through) background text, using CSS.
+        </p>
+        <hr>
+        <h2>Transparent Image Text</h2>
+        <style>
+
+.container {
+    position: relative;
+    max-width:900px;
+    margin:0 auto;
+}
+
+.container img {vertical-align:middle}
+
+.container .content {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+
+</style>
+        <div class="container">
+  <img src="../../../../../ass/png/w3-notebook.jpg" alt="Notebook" style="width:100%;">
+  <div class="content">
+    <h1>Heading</h1>
+    <p>Lorem ipsum dolor sit amet, an his etiam torquatos. </p>
+  </div>
+</div>
+<hr>
+<h2>How To Create a Transparent Image Text</h2>
+<h3>Step 1) Add HTML:</h3>
+<h4>Example</h4>
+<div class="oi">
+        <pre class="prettyprint">
+ &lt;div class="container"&gt;
+  &lt;img src="notebook.jpg" alt="Notebook" style="width:100%;"&gt;
+  &lt;div class="content"&gt;
+    &lt;h1&gt;Heading&lt;/h1&gt;
+    &lt;p&gt;Lorem ipsum..&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt; 
+
+        </pre>
+</div>
+<h3>Step 1) Add CSS:</h3>
+<h3>Example</h3>
+<div class="oi">
+        <pre class="prettyprint">
+.container {
+  position: relative;
+  max-width: 800px; /* Maximum width */
+  margin: 0 auto; /* Center it */
+}
+
+.container .content {
+  position: absolute; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px; /* Some padding */
+}
+        </pre>
+</div>
+</div>
+</body>
+<script src="../../../../../ass/api/code-prettify/loader/run_prettify.js"></script>
+</html>

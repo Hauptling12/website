@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+            <link rel="stylesheet" href="../../../../../ass/css/index.css">
+        <title>docs wiki</title>
+        <style>
+
+</style>
+</head>
+<body>
+<div class="sidenav">
+  <a href="../../../../coding/index.html">Coding</a>
+  <a href="../../../../english/index.html">english</a>
+  <a href="../../../../hardware/index.html">hardware</a>
+  <a href="../../../../history/index.html">history</a>
+  <a href="../../../../math/index.html">math</a>
+  <a href="../../../../repair/index.html">repair</a>
+  <a href="../../../../server/index.html">server</a>
+  <a href="../../../../science/index.html">science</a>
+  <a href="../../../../software/index.html">software</a>
+  <a href="../../../../tech/index.html">tech</a>
+  <a href="../../../../wikis/index.html">wikis</a>
+
+</div>
+<div class="main">
+        <h3>How TO - CSS Skill Bar</h3>
+        <hr>
+        <p>
+Learn how to create a skill bar with CSS.
+        </p>
+        <hr>
+        <h2>My Skills</h2>
+        <p>A "skill bar" is often used in online CV's/resumes to display your skills in different subjects:</p>
+<style>
+* {box-sizing: border-box}
+
+.container {
+  width: 100%;
+  background-color: #ddd;
+}
+
+.skills {
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.html {width: 90%; background-color: #04AA6D;}
+.css {width: 80%; background-color: #2196F3;}
+.js {width: 65%; background-color: #f44336;}
+.php {width: 60%; background-color: #808080;}
+</style>
+</head>
+<body>
+
+<p>HTML</p>
+<div class="container">
+  <div class="skills html">90%</div>
+</div>
+
+<p>CSS</p>
+<div class="container">
+  <div class="skills css">80%</div>
+</div>
+
+<p>JavaScript</p>
+<div class="container">
+  <div class="skills js">65%</div>
+</div>
+
+<p>PHP</p>
+<div class="container">
+  <div class="skills php">60%</div>
+</div>
+        <hr>
+<h2>How To Create a Skill Bar</h2>
+<h3>Step 1) Add HTML:</h3>
+<h4>Example</h4>
+<div>
+        <pre class="prettyprint">
+&lt;p&gt;HTML&lt;/p&gt;
+&lt;div class="container"&gt;
+  &lt;div class="skills html"&gt;90%&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;CSS&lt;/p&gt;
+&lt;div class="container"&gt;
+  &lt;div class="skills css"&gt;80%&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;JavaScript&lt;/p&gt;
+&lt;div class="container"&gt;
+  &lt;div class="skills js"&gt;65%&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;PHP&lt;/p&gt;
+&lt;div class="container"&gt;
+  &lt;div class="skills php"&gt;60%&lt;/div&gt;
+&lt;/div&gt;
+
+        </pre>
+</div>
+<h3>Step 2) Add CSS:</h3>
+<h3>Example</h3>
+<div>
+        <pre class="prettyprint">
+/* Make sure that padding behaves as expected */
+* {box-sizing:border-box}
+
+/* Container for skill bars */
+.container {
+  width: 100%; /* Full width */
+  background-color: #ddd; /* Grey background */
+}
+
+.skills {
+  text-align: right; /* Right-align text */
+  padding-top: 10px; /* Add top padding */
+  padding-bottom: 10px; /* Add bottom padding */
+  color: white; /* White text color */
+}
+
+.html {width: 90%; background-color: #04AA6D;} /* Green */
+.css {width: 80%; background-color: #2196F3;} /* Blue */
+.js {width: 65%; background-color: #f44336;} /* Red */
+.php {width: 60%; background-color: #808080;} /* Dark Grey */
+        </pre>
+</div>
+</div>
+</body>
+<script src="../../../../../ass/api/code-prettify/loader/run_prettify.js"></script>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+            <link rel="stylesheet" href="../../../../../ass/css/index.css">
+        <title>docs wiki</title>
+        <style>
+ol {
+  list-style-type: none;
+}
+
+</style>
+</head>
+<body>
+<div class="sidenav">
+  <a href="../../coding/index.html">Coding</a>
+  <a href="../../english/index.html">english</a>
+  <a href="../../hardware/index.html">hardware</a>
+  <a href="../../history/index.html">history</a>
+  <a href="../../math/index.html">math</a>
+  <a href="../../repair/index.html">repair</a>
+  <a href="../../server/index.html">server</a>
+  <a href="../../science/index.html">science</a>
+  <a href="../../software/index.html">software</a>
+  <a href="../../tech/index.html">tech</a>
+  <a href="../../wikis/index.html">wikis</a>
+
+</div>
+<div class="main">
+        <h3>How TO - Collapsibles/Accordion</h3>
+        <hr>
+        <p>
+Learn how to create an accordion (collapsible content).
+        </p>
+        <hr>
+        <h4>Accordion</h4>
+        <p>Accordions are useful when you want to toggle between hiding and showing large amount of content:</p>
+         <button class="accordion">Section 1</button>
+<div class="panel">
+  <p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</p>
+</div>
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+  <p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</p>
+</div>
+<hr>
+<h3>Create An Accordion</h3>
+<h5>Step 1) Add HTML:</h5>
+<h4>  Example</h4>
+<div style="background-color:#59584E">
+        <pre>
+&lt;</span>button<span class="attributecolor" style="color:red"> class<span class="attributevaluecolor" style="color:mediumblue">="accordion"</span></span><span class="tagcolor" style="color:mediumblue">&gt;</span></span>Section 1<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/button<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br><span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>div<span class="attributecolor" style="color:red"> class<span class="attributevaluecolor" style="color:mediumblue">="panel"</span></span><span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>&nbsp; <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>p<span class="tagcolor" style="color:mediumblue">&gt;</span></span>Loremipsum...<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/p<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br><span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/div<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br><br><span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>button<span class="attributecolor" style="color:red"> class<span class="attributevaluecolor" style="color:mediumblue">="accordion"</span></span><span class="tagcolor" style="color:mediumblue">&gt;</span></span>Section2<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/button<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br><span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>div<span class="attributecolor" style="color:red"> class<span class="attributevaluecolor" style="color:mediumblue">="panel"</span></span><span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>&nbsp; <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>p<span class="tagcolor" style="color:mediumblue">&gt;</span></span>Lorem ipsum...<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/p<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br><span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/div<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br><br>
+<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>button<span class="attributecolor" style="color:red"> class<span class="attributevaluecolor" style="color:mediumblue">="accordion"</span></span><span class="tagcolor" style="color:mediumblue">&gt;</span></span>Section 3<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/button<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br><span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>div<span class="attributecolor" style="color:red"> class<span class="attributevaluecolor" style="color:mediumblue">="panel"</span></span><span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>&nbsp; <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>p<span class="tagcolor" style="color:mediumblue">&gt;</span></span>Lorem ipsum...<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/p<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br><span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/div<span class="tagcolor" style="color:mediumblue">&gt;</span></span>
+        </pre>
+</div>
+<h3>Step 2) Add CSS:</h3>
+<h5>Style the accordion:</h5>
+<h4>  Example</h4>
+<div style="background-color:#59584E">
+        <pre>
+<span class="commentcolor" style="color:green">/* Style the buttons that are used to open and close the accordion panel */</span><br>.accordion <span class="cssdelimitercolor" style="color:black">{</span><span class="csspropertycolor" style="color:red"><br>&nbsp;&nbsp;background-color<span class="csspropertyvaluecolor" style="color:mediumblue"><span class="cssdelimitercolor" style="color:black">:</span> #eee<span class="cssdelimitercolor" style="color:black">;</span></span><br>&nbsp;&nbsp;color<span class="csspropertyvaluecolor" style="color:mediumblue"><span class="cssdelimitercolor" style="color:black">:</span> #444<span class="cssdelimitercolor" style="color:black">;</span></span><br>
+&nbsp; cursor<span class="csspropertyvaluecolor" style="color:mediumblue"><span class="cssdelimitercolor" style="color:black">:</span> pointer<span class="cssdelimitercolor" style="color:black">;</span></span><br>&nbsp; padding<span class="csspropertyvaluecolor" style="color:mediumblue"><span class="cssdelimitercolor" style="color:black">:</span> 18px<span class="cssdelimitercolor" style="color:black">;</span></span><br>&nbsp; width<span class="csspropertyvaluecolor" style="color:mediumblue"><span class="cssdelimitercolor" style="color:black">:</span> 100%<span class="cssdelimitercolor" style="color:black">;</span></span><br>&nbsp;text-align<span class="csspropertyvaluecolor" style="color:mediumblue"><span class="cssdelimitercolor" style="color:black">:</span> left<span class="cssdelimitercolor" style="color:black">;</span></span><br>&nbsp;&nbsp;border<span class="csspropertyvaluecolor" style="color:mediumblue"><span class="cssdelimitercolor" style="color:black">:</span> none<span class="cssdelimitercolor" style="color:black">;</span></span><br>&nbsp;&nbsp;outline<span class="csspropertyvaluecolor" style="color:mediumblue"><span class="cssdelimitercolor" style="color:black">:</span> none<span class="cssdelimitercolor" style="color:black">;</span></span><br>
+&nbsp; transition<span class="csspropertyvaluecolor" style="color:mediumblue"><span class="cssdelimitercolor" style="color:black">:</span> 0.4s<span class="cssdelimitercolor" style="color:black">;</span></span><br></span><span class="cssdelimitercolor" style="color:black">}</span><br>
+<br><span class="commentcolor" style="color:green">/* Add a background color to the button if it is clicked on (add the
+.active class with JS), and when you move the mouse over it (hover) */</span><br>
+.active, .accordion:hover <span class="cssdelimitercolor" style="color:black">{</span><span class="csspropertycolor" style="color:red"><br>&nbsp;
+background-color<span class="csspropertyvaluecolor" style="color:mediumblue"><span class="cssdelimitercolor" style="color:black">:</span> #ccc<span class="cssdelimitercolor" style="color:black">;</span></span><br></span><span class="cssdelimitercolor" style="color:black">}</span><br><br><span class="commentcolor" style="color:green">/* Style the accordion panel. Note:hidden by default */</span><br>.panel <span class="cssdelimitercolor" style="color:black">{</span><span class="csspropertycolor" style="color:red"><br>&nbsp;&nbsp;padding<span class="csspropertyvaluecolor" style="color:mediumblue"><span class="cssdelimitercolor" style="color:black">:</span> 0 18px<span class="cssdelimitercolor" style="color:black">;</span></span><br>&nbsp;&nbsp;background-color<span class="csspropertyvaluecolor" style="color:mediumblue"><span class="cssdelimitercolor" style="color:black">:</span> white<span class="cssdelimitercolor" style="color:black">;</span></span><br>&nbsp;&nbsp;display<span class="csspropertyvaluecolor" style="color:mediumblue"><span class="cssdelimitercolor" style="color:black">:</span> none<span class="cssdelimitercolor" style="color:black">;</span></span><br>&nbsp;&nbsp;overflow<span class="csspropertyvaluecolor" style="color:mediumblue"><span class="cssdelimitercolor" style="color:black">:</span> hidden<span class="cssdelimitercolor" style="color:black">;</span></span><br></span><span class="cssdelimitercolor" style="color:black">}</span> </span>
+        </pre>
+</div>
+<h3>Step 3) Add JavaScript:</h3>
+<h4>  Example</h4>
+<div style="background-color:#59584E">
+        <pre>
+</span><span class="jskeywordcolor" style="color:mediumblue">var</span> acc = document.<span class="jspropertycolor" style="color:black">getElementsByClassName</span>(<span class="jsstringcolor" style="color:brown">"accordion"</span>);<br>
+<span class="jskeywordcolor" style="color:mediumblue">var</span> i;<br><br><span class="jskeywordcolor" style="color:mediumblue">for</span> (i = <span class="jsnumbercolor" style="color:red">0</span>; i &lt; acc.<span class="jspropertycolor" style="color:black">length</span>; i++) {<br>&nbsp;&nbsp;acc[i].<span class="jspropertycolor" style="color:black">addEventListener</span>(<span class="jsstringcolor" style="color:brown">"click"</span>, <span class="jsnumbercolor" style="color:red"></span>  <span class="jskeywordcolor" style="color:mediumblue">function</span>() {<br>&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor" style="color:red">
+</span><span class="commentcolor" style="color:green">/* Toggle between adding and removing the "active" class,<br>&nbsp;&nbsp;&nbsp; to highlight the button that controls the panel */</span><br>&nbsp;&nbsp;&nbsp;
+<span class="jskeywordcolor" style="color:mediumblue">this</span>.<span class="jspropertycolor" style="color:black">classList</span>.<span class="jspropertycolor" style="color:black">toggle</span>(<span class="jsstringcolor" style="color:brown">"active"</span>);<br><br>&nbsp;&nbsp;&nbsp; <span class="jsnumbercolor" style="color:red">
+</span>  <span class="jsregexpcolor" style="color:#f50">/* Toggle between hiding and showing the active panel */</span><br>&nbsp;&nbsp;&nbsp; <span class="jsnumbercolor" style="color:red"></span>  <span class="jskeywordcolor" style="color:mediumblue">var</span> panel = <span class="jskeywordcolor" style="color:mediumblue">this</span>.<span class="jspropertycolor" style="color:black">nextElementSibling</span>;<br>&nbsp;&nbsp;&nbsp; <span class="jsnumbercolor" style="color:red"></span>  <span class="jskeywordcolor" style="color:mediumblue">if</span> (panel.<span class="jspropertycolor" style="color:black">style</span>.<span class="jspropertycolor" style="color:black">display</span> === <span class="jsstringcolor" style="color:brown">"block"</span>) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="jsnumbercolor" style="color:red">
+</span>  panel.<span class="jspropertycolor" style="color:black">style</span>.<span class="jspropertycolor" style="color:black">display</span> = <span class="jsstringcolor" style="color:brown">"none"</span>;<br>&nbsp;&nbsp;&nbsp;&nbsp;} <span class="jsnumbercolor" style="color:red"></span>  <span class="jskeywordcolor" style="color:mediumblue">else</span> {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="jsnumbercolor" style="color:red">
+</span>  panel.<span class="jspropertycolor" style="color:black">style</span>.<span class="jspropertycolor" style="color:black">display</span> = <span class="jsstringcolor" style="color:brown">"block"</span>;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp; });<br><span class="jsnumbercolor" style="color:red"></span>} </span>
+        </pre>
+</div>
+<h2>Animated Accordion (Slide Down)</h2>
+<p>To make an animated accordion, <code style="color:darkred">add max-height: 0, overflow: hidden</code> and a <code style="color:darkred">transition</code> for the <code style="color:darkred">max-height</code> property, to the <code style="color:darkred">panel</code> class.</p>
+<p>Then, use JavaScript to slide down the content by setting a calculated <code style="color:darkred">max-height</code>, depending on the panel's height on different screen sizes:</p>
+<h4>  Example</h4>
+<div style="background-color:#59584E">
+        <pre>
+&lt;style&gt;
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+&lt;/style&gt;
+
+&lt;script&gt;
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i &lt; acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+&lt;/script&gt;
+        </pre>
+</div>
+<h2>Add Icons</h2>
+<p>Add a symbol to each button to indicate whether the collapsible content is open or closed:</p>
+<h4>  Example</h4>
+<div style="background-color:#59584E">
+        <pre>
+.accordion:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+        </pre>
+</div>
+
+
+
+
+
+
+</div>
+<script src="../../../../../ass/js/index.js"></script>
+</body>
+</html>

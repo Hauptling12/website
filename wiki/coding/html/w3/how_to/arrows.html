@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+            <link rel="stylesheet" href="../../../../../ass/css/index.css">
+        <title>docs wiki</title>
+        <style>
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.oi {
+        background-color:#59584E;
+}
+</style>
+</head>
+<body>
+<div class="sidenav">
+  <a href="../../coding/index.html">Coding</a>
+  <a href="../../english/index.html">english</a>
+  <a href="../../hardware/index.html">hardware</a>
+  <a href="../../history/index.html">history</a>
+  <a href="../../math/index.html">math</a>
+  <a href="../../repair/index.html">repair</a>
+  <a href="../../server/index.html">server</a>
+  <a href="../../science/index.html">science</a>
+  <a href="../../software/index.html">software</a>
+  <a href="../../tech/index.html">tech</a>
+  <a href="../../wikis/index.html">wikis</a>
+
+</div>
+<div class="main">
+        <h3>How TO - CSS Arrows</h3>
+        <hr>
+        <p>
+Learn how to create arrows with CSS.
+        </p>
+        <hr>
+        <p>Right arrow: <i class="arrow right"></i></p>
+<p>Left arrow: <i class="arrow left"></i></p>
+<p>Up arrow: <i class="arrow up"></i></p>
+<p>Down arrow: <i class="arrow down"></i></p>
+<hr>
+<h2>How To Create Arrows</h2>
+<h3>Step 1) Add HTML:</h3>
+<h4>Example</h4>
+<div class="oi">
+        <pre>
+&lt;p&gt;Right arrow: &lt;i class="arrow right"&gt;&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;Left arrow: &lt;i class="arrow left"&gt;&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;Up arrow: &lt;i class="arrow up"&gt;&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;Down arrow: &lt;i class="arrow down"&gt;&lt;/i&gt;&lt;/p&gt;
+        </pre>
+</div>
+<h3>Step 1) Add CSS:</h3>
+<div class="oi">
+        <pre>
+ .arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+        </pre>
+</div>
+</div>
+</body>
+</html>

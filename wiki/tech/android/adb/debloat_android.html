@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+            <link rel="stylesheet" href="ass/css/index.css">
+        <title>docs wiki</title>
+        <style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+ol {
+  list-style-type: none;
+}
+
+</style>
+</head>
+<body>
+<div class="sidenav">
+  <a href="../../coding/index.html">Coding</a>
+  <a href="../../english/index.html">english</a>
+  <a href="../../hardware/index.html">hardware</a>
+  <a href="../../history/index.html">history</a>
+  <a href="../../math/index.html">math</a>
+  <a href="../../repair/index.html">repair</a>
+  <a href="../../server/index.html">server</a>
+  <a href="../../science/index.html">science</a>
+  <a href="../../software/index.html">software</a>
+  <a href="../tech/index.html">tech</a>
+  <a href="../../wikis/index.html">wikis</a>
+
+</div>
+<div class="main">
+  <div>
+    <div data-controller="page-data"></div>
+<div id="page_section_container" class="page-sections page-page-sections"><div id="page_section_21260712" class="react-page-section">
+  <div data-react-class="page_section/RichText" data-react-props="{&quot;heading&quot;:&quot;Debloat Android&quot;,&quot;id&quot;:21260712,&quot;theme&quot;:{&quot;name&quot;:&quot;dark&quot;,&quot;colors&quot;:{&quot;background&quot;:&quot;#ffffff&quot;,&quot;button&quot;:&quot;#009fd8&quot;,&quot;buttonText&quot;:&quot;#ffffff&quot;,&quot;heading&quot;:&quot;#36434d&quot;,&quot;text&quot;:&quot;#5e6971&quot;},&quot;background&quot;:{&quot;blend&quot;:&quot;normal&quot;,&quot;blur&quot;:0,&quot;contrast&quot;:75,&quot;grayscale&quot;:100,&quot;opacity&quot;:38,&quot;url&quot;:null}},&quot;button&quot;:{&quot;text&quot;:&quot;&quot;,&quot;url&quot;:&quot;&quot;},&quot;text&quot;:&quot;\u003cdiv\u003eThis article goes over using ADB Platform Tools and utilizing adb to uninstall packages by using these tools.\u003cbr\u003e\u003cbr\u003e\u003c/div\u003e\u003cdiv\u003e\u003cstrong\u003ePre-Requisites for Using ADB\u003c/strong\u003e\u003c/div\u003e\u003cdiv\u003eSetup all of the following to use ADB\u003cbr\u003e\u003cbr\u003e\u003c/div\u003e\u003cdiv\u003e\u003cstrong\u003eSetup Computer with ADB Platform Tools\u003c/strong\u003e\u003c/div\u003e\u003cul\u003e\u003cli\u003eWindows Install with Chocolatey choco install adb\u003c/li\u003e\u003cli\u003eLinux Install with Terminal sudo apt-get install android-tools-adb android-tools-fastboot\u003c/li\u003e\u003cli\u003eMacOS Install with Homebrew\u003cul\u003e\u003cli\u003eHomebrew install - ruby -e “$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\&quot;\u003c/li\u003e\u003cli\u003eADB Homebrew Install - brew cask install android-platform-tools\u003c/li\u003e\u003c/ul\u003e\u003c/li\u003e\u003c/ul\u003e\u003cdiv\u003e\u003cstrong\u003eSetup Phone for ADB Debugging\u003c/strong\u003e\u003c/div\u003e\u003col\u003e\u003cli\u003eOpen Settings, and select “About”.\u003c/li\u003e\u003cli\u003eTap on “Build number” seven times.\u003c/li\u003e\u003cli\u003eGo back, and select “Developer options”.\u003c/li\u003e\u003cli\u003eScroll down, and check the “Android debugging” or “USB debugging” entry under “Debugging”.\u003c/li\u003e\u003cli\u003ePlug your device into your computer.\u003c/li\u003e\u003cli\u003eOn the computer, open up a terminal/command prompt and type adb devices.\u003c/li\u003e\u003cli\u003eA dialog should show on your device, asking you to allow usb debugging. Check “always allow”, and choose “OK”.\u003cul\u003e\u003cli\u003eNote: If you don’t see this prompt on you device change the usb connection to MTP or File Transfer on the device\u003c/li\u003e\u003c/ul\u003e\u003c/li\u003e\u003c/ol\u003e\u003cdiv\u003e\u003cstrong\u003eADB Commands - These only work when device is booted\u003c/strong\u003e\u003c/div\u003e\u003cul\u003e\u003cli\u003eadb devices - shows all connected adb devices\u003c/li\u003e\u003cli\u003eadb shell - launches a shell on the device\u003c/li\u003e\u003cli\u003eadb shell pm list packages - list all installed packages on the device\u003c/li\u003e\u003cli\u003eadb shell pm list packages -3\&quot;|cut -f 2 -d \&quot;: - lists all user installed packages\u003c/li\u003e\u003cli\u003eadb push \u0026lt;local\u0026gt; \u0026lt;remote\u0026gt; - pushes the file to\u003c/li\u003e\u003cli\u003eadb pull \u0026lt;remote\u0026gt; [\u0026lt;local\u0026gt;] - pulls the file to . If isn’t specified, it will pull to the current folder.\u003c/li\u003e\u003cli\u003eadb logcat - allows you to view the device log in real-time. You can use adb logcat -b radio to view radio logs, and adb logcat -C to view logs in colour\u003c/li\u003e\u003cli\u003eadb install \u0026lt;file\u0026gt; - installs the given .apk file to your device\u003c/li\u003e\u003cli\u003eadb uninstall com.packagename - uninstalls package from shell pm list packages\u003cul\u003e\u003cli\u003e\u003cem\u003eNote: if you encounter “[DELETE_FAILED_INTERNAL_ERROR]” type this to bypass:\u003c/em\u003e adb shell pm uninstall --user 0 \u0026lt;appname\u0026gt;\u003c/li\u003e\u003c/ul\u003e\u003c/li\u003e\u003cli\u003eadb reboot - reboots system\u003c/li\u003e\u003cli\u003eadb reboot bootloader - reboots to bootloader\u003c/li\u003e\u003cli\u003eadb reboot recovery - reboots into recovery mode\u003c/li\u003e\u003cli\u003eadb reboot fastboot - reboots into fastboot mode\u003c/li\u003e\u003c/ul\u003e\u003cdiv\u003e\u003cstrong\u003e\u003cbr\u003eFastboot Commands - These commands work when device is in Bootloader and Fastboot Mode\u003cbr\u003e\u003c/strong\u003e\u003cbr\u003e\u003c/div\u003e\u003cul\u003e\u003cli\u003efastboot devices - shows all connected devices\u003c/li\u003e\u003cli\u003efastboot reboot - reboots device - can add bootloader, recovery, and fastboot\u003c/li\u003e\u003cli\u003efastboot oem device-info - shows oem bootloader status (unlocked or locked)\u003c/li\u003e\u003cli\u003efastboot oem unlock - unlocks oem phones - \u003cem\u003enote: aosp and unlocked phones don’t need this\u003c/em\u003e\u003c/li\u003e\u003cli\u003efastboot flashing unlock - unlocks system for custom rom in pixel and other phones\u003c/li\u003e\u003cli\u003efastboot flashing unlock_critical - unlocks bootloader and system partitions - \u003cem\u003enote: this isn’t generally needed\u003c/em\u003e\u003c/li\u003e\u003cli\u003efastboot format:ext4 userdata - format userdata on device - \u003cem\u003enote: this will erase your entire device\u003c/em\u003e\u003c/li\u003e\u003cli\u003efastboot boot recovery.img - test recovery image without flashing\u003c/li\u003e\u003cli\u003efastboot flash recovery recovery.img - flash recovery image then run fastboot reboot recovery to boot into it.\u003c/li\u003e\u003cli\u003efastboot flash boot boot.img - flash boot image - this is the kernel\u003c/li\u003e\u003cli\u003efastboot -w - wipes device\u003c/li\u003e\u003cli\u003efastboot update \u0026lt;/path/to/your/Rom.zip\u0026gt; - flashes zip to the device\u003c/li\u003e\u003c/ul\u003e&quot;,&quot;mediaAlignment&quot;:&quot;media-alignment-left&quot;,&quot;mediaStyle&quot;:&quot;media-style-plain&quot;}" data-react-cache-id="page_section/RichText-0"><div class="page-section rich-text-page-section cover-image-container theme-dark media-alignment-left media-style-plain"><div class="cover-image"></div><div class="container"><div class="content"><div class="text-content"><h1 class="heading h-element">Debloat Android</h1><div class="Text__TextWrapper-sc-1rhb08-0 hTVjzi text"><div>This article goes over using ADB Platform Tools and utilizing adb to uninstall packages by using these tools.<br><br></div><div><strong>Pre-Requisites for Using ADB</strong></div><div>Setup all of the following to use ADB<br><br></div><div><strong>Setup Computer with ADB Platform Tools</strong></div><ul><li>Windows Install with Chocolatey choco install adb</li><li>Linux Install with Terminal sudo apt-get install android-tools-adb android-tools-fastboot</li><li>MacOS Install with Homebrew<ul><li>Homebrew install - ruby -e “$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</li><li>ADB Homebrew Install - brew cask install android-platform-tools</li></ul></li></ul><div><strong>Setup Phone for ADB Debugging</strong></div><ol><li>Open Settings, and select “About”.</li><li>Tap on “Build number” seven times.</li><li>Go back, and select “Developer options”.</li><li>Scroll down, and check the “Android debugging” or “USB debugging” entry under “Debugging”.</li><li>Plug your device into your computer.</li><li>On the computer, open up a terminal/command prompt and type adb devices.</li><li>A dialog should show on your device, asking you to allow usb debugging. Check “always allow”, and choose “OK”.<ul><li>Note: If you don’t see this prompt on you device change the usb connection to MTP or File Transfer on the device</li></ul></li></ol><div><strong>ADB Commands - These only work when device is booted</strong></div><ul><li>adb devices - shows all connected adb devices</li><li>adb shell - launches a shell on the device</li><li>adb shell pm list packages - list all installed packages on the device</li><li>adb shell pm list packages -3"|cut -f 2 -d ": - lists all user installed packages</li><li>adb push &lt;local&gt; &lt;remote&gt; - pushes the file to</li><li>adb pull &lt;remote&gt; [&lt;local&gt;] - pulls the file to . If isn’t specified, it will pull to the current folder.</li><li>adb logcat - allows you to view the device log in real-time. You can use adb logcat -b radio to view radio logs, and adb logcat -C to view logs in colour</li><li>adb install &lt;file&gt; - installs the given .apk file to your device</li><li>adb uninstall com.packagename - uninstalls package from shell pm list packages<ul><li><em>Note: if you encounter “[DELETE_FAILED_INTERNAL_ERROR]” type this to bypass:</em> adb shell pm uninstall --user 0 &lt;appname&gt;</li></ul></li><li>adb reboot - reboots system</li><li>adb reboot bootloader - reboots to bootloader</li><li>adb reboot recovery - reboots into recovery mode</li><li>adb reboot fastboot - reboots into fastboot mode</li></ul><div><strong><br>Fastboot Commands - These commands work when device is in Bootloader and Fastboot Mode<br></strong><br></div><ul><li>fastboot devices - shows all connected devices</li><li>fastboot reboot - reboots device - can add bootloader, recovery, and fastboot</li><li>fastboot oem device-info - shows oem bootloader status (unlocked or locked)</li><li>fastboot oem unlock - unlocks oem phones - <em>note: aosp and unlocked phones don’t need this</em></li><li>fastboot flashing unlock - unlocks system for custom rom in pixel and other phones</li><li>fastboot flashing unlock_critical - unlocks bootloader and system partitions - <em>note: this isn’t generally needed</em></li><li>fastboot format:ext4 userdata - format userdata on device - <em>note: this will erase your entire device</em></li><li>fastboot boot recovery.img - test recovery image without flashing</li><li>fastboot flash recovery recovery.img - flash recovery image then run fastboot reboot recovery to boot into it.</li><li>fastboot flash boot boot.img - flash boot image - this is the kernel</li><li>fastboot -w - wipes device</li><li>fastboot update &lt;/path/to/your/Rom.zip&gt; - flashes zip to the device</li></ul></div></div></div></div></div></div>
+</div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+            <link rel="stylesheet" href="../../../../../ass/css/index.css">
+        <title>docs wiki</title>
+        <style>
+.oi {
+        background-color:#59584E;
+}
+</style>
+</head>
+<body>
+<div class="sidenav">
+  <a href="../../../../coding/index.html">Coding</a>
+  <a href="../../../../english/index.html">english</a>
+  <a href="../../../../hardware/index.html">hardware</a>
+  <a href="../../../../history/index.html">history</a>
+  <a href="../../../../math/index.html">math</a>
+  <a href="../../../../repair/index.html">repair</a>
+  <a href="../../../../server/index.html">server</a>
+  <a href="../../../../science/index.html">science</a>
+  <a href="../../../../software/index.html">software</a>
+  <a href="../../../../tech/index.html">tech</a>
+  <a href="../../../../wikis/index.html">wikis</a>
+
+</div>
+<div class="main">
+        <h3>How TO - Typing Effect</h3>
+        <hr>
+        <p>
+Learn how to create a typing effect with JavaScript.
+        </p>
+        <hr>
+        <button onclick="typeWriter()">Start the typing effect</button>
+        <p id="demo"></p>
+<hr>
+<h2>Creating a Typing Effect</h2>
+<h3>Step 1) Add HTML:</h3>
+<h4>Example</h4>
+<div class="oi">
+        <pre class="prettyprint">
+        &lt;button onclick="typeWriter()"&gt;Click me&lt;/button&gt;
+ &lt;p id="demo"&gt;&lt;/p&gt;
+
+        </pre>
+</div>
+<h3>Step 1) Add JavaScript:</h3>
+<h3>Example</h3>
+<div class="oi">
+        <pre class="prettyprint">
+var i = 0;
+var txt = ' Lorem ipsum typing effect! Great stuff! Cant wait to check out the Try it Yourself!'; /* The text */
+var speed = 50; /* The speed/duration of the effect in milliseconds */
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+        </pre>
+</div>
+</div>
+</body>
+<script>
+var i = 0;
+var txt = 'Lorem ipsum typing effect!'; /* The text */
+var speed = 50; /* The speed/duration of the effect in milliseconds */
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
+<script src="../../../../../ass/api/code-prettify/loader/run_prettify.js"></script>
+</html>

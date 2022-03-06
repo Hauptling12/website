@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+            <link rel="stylesheet" href="../../../../ass/css/index.css">
+        <title>docs wiki</title>
+        <style>
+</style>
+</head>
+<body>
+<div class="sidenav">
+  <a href="../../coding/index.html">Coding</a>
+  <a href="../../english/index.html">english</a>
+  <a href="../../hardware/index.html">hardware</a>
+  <a href="../../history/index.html">history</a>
+  <a href="../../math/index.html">math</a>
+  <a href="../../repair/index.html">repair</a>
+  <a href="../../server/index.html">server</a>
+  <a href="../../science/index.html">science</a>
+  <a href="../../software/index.html">software</a>
+  <a href="../tech/index.html">tech</a>
+  <a href="../../wikis/index.html">wikis</a>
+
+</div>
+<div class="main">
+        <h1>3 Ways to Find Out Which Process Listening on a Particular Port</h1>
+        <p>A port is a logical entity that represents an endpoint of communication and is associated with a given process or service in an operating system. In previous articles, we explained how to find out the list of all open ports in Linux and how to check if remote ports are reachable using the Netcat command.</p>
+        <p>In this short guide, we will show different ways of finding the process/service listening on a particular port in Linux.</p>
+        <article>
+                <article>
+                        <h2>1. Using netstat Command</h2>
+                        <p>netstat (network statistics) command is used to display information concerning network connections, routing tables, interface stats, and beyond. It is available on all Unix-like operating systems including Linux and also on Windows OS.</p>
+                        <p>In case you do not have it installed by default, use the following command to install it.</p>
+                        <pre>
+$ sudo apt-get install net-tools    [On Debian/Ubuntu & Mint]
+$ sudo dnf install net-tools        [On CentOS/RHEL/Fedora and Rocky Linux/AlmaLinux]
+$ pacman -S netstat-nat             [On Arch Linux]
+$ emerge sys-apps/net-tools         [On Gentoo]
+$ sudo dnf install net-tools        [On Fedora]
+$ sudo zypper install net-tools     [On openSUSE]
+                        </pre>
+                        <p>Once installed, you can use it with the grep command to find the process or service listening on a particular port in Linux as follows (specify the port).</p>
+                        <pre>
+                        $ netstat -ltnp | grep -w ':80'
+                        </pre>
+                </article>
+        </article>
+</div>
+</body>
+</html>

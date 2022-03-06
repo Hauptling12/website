@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+            <link rel="stylesheet" href="../../../../../ass/css/index.css">
+            <link rel="stylesheet" href="../../../../../ass/font/css/all.css">
+        <title>docs wiki</title>
+        <style>
+
+</style>
+</head>
+<body>
+<div class="sidenav">
+  <a href="../../../../coding/index.html">Coding</a>
+  <a href="../../../../english/index.html">english</a>
+  <a href="../../../../hardware/index.html">hardware</a>
+  <a href="../../../../history/index.html">history</a>
+  <a href="../../../../math/index.html">math</a>
+  <a href="../../../../repair/index.html">repair</a>
+  <a href="../../../../server/index.html">server</a>
+  <a href="../../../../science/index.html">science</a>
+  <a href="../../../../software/index.html">software</a>
+  <a href="../../../../tech/index.html">tech</a>
+  <a href="../../../../wikis/index.html">wikis</a>
+
+</div>
+<div class="main">
+        <h3>How TO - Split Buttons</h3>
+        <hr>
+        <p>
+Learn how to create a split button dropdown with CSS.
+        </p>
+        <hr>
+        <h2>Split Button Dropdowns</h2>
+        <p>Hover over the arrow icon to open the dropdown menu:</p>
+        <style>
+.btn {
+  background-color: #2196F3;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+}
+
+.dropdown {
+  position: absolute;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.btn:hover, .dropdown:hover .btn {
+  background-color: #0b7dda;
+}
+</style>
+<button class="btn">Button</button>
+<div class="dropdown">
+  <button class="btn" style="border-left:1px solid #0d8bf2">
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
+
+        <hr>
+<h2>How To Create a Split Button</h2>
+<h3>Step 1) Add HTML:</h3>
+<p>Create a dropdown menu that appears when the user moves the mouse over an icon.</p>
+<h4>Example</h4>
+<div>
+        <pre class="prettyprint">
+&lt;!-- Font Awesome Icon Library --&gt;
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"&gt;
+
+&lt;button class="btn"&gt;Button&lt;/button&gt;
+&lt;div class="dropdown"&gt;
+  &lt;button class="btn" style="border-left:1px solid navy"&gt;
+    &lt;i class="fa fa-caret-down"&gt;&lt;/i&gt;
+  &lt;/button&gt;
+  &lt;div class="dropdown-content"&gt;
+    &lt;a href="#"&gt;Link 1&lt;/a&gt;
+    &lt;a href="#"&gt;Link 2&lt;/a&gt;
+    &lt;a href="#"&gt;Link 3&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt; 
+        </pre>
+</div>
+<h2>Example Explained</h2>
+<p>
+Use any element to open the dropdown menu, e.g. a &lt;button&gt;, &lt;a&gt; or &lt;p&gt; element.<br>
+Use a container element (like &lt;div&gt;) to create the dropdown menu and add the dropdown links inside it.<br>
+Wrap a &lt;div&gt; element around the button and the &lt;div&gt; to position the dropdown menu correctly with CSS.
+</p><hr>
+<h3>Step 2) Add CSS:</h3>
+<h3>Example</h3>
+<div>
+        <pre class="prettyprint">
+ /* Dropdown Button */
+.btn {
+  background-color: #2196F3;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: absolute;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.btn:hover, .dropdown:hover .btn  {
+  background-color: #0b7dda;
+} 
+        </pre>
+</div>
+</div>
+</body>
+<script src="../../../../../ass/api/code-prettify/loader/run_prettify.js"></script>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+            <link rel="stylesheet" href="../../../../../ass/css/index.css">
+        <title>docs wiki</title>
+        <style>
+.oi {
+        background-color:#59584E;
+}
+</style>
+</head>
+<body>
+<div class="sidenav">
+  <a href="../../../../coding/index.html">Coding</a>
+  <a href="../../../../english/index.html">english</a>
+  <a href="../../../../hardware/index.html">hardware</a>
+  <a href="../../../../history/index.html">history</a>
+  <a href="../../../../math/index.html">math</a>
+  <a href="../../../../repair/index.html">repair</a>
+  <a href="../../../../server/index.html">server</a>
+  <a href="../../../../science/index.html">science</a>
+  <a href="../../../../software/index.html">software</a>
+  <a href="../../../../tech/index.html">tech</a>
+  <a href="../../../../wikis/index.html">wikis</a>
+
+</div>
+<div class="main">
+        <h3>How TO - Thumbnail</h3>
+        <hr>
+        <p>
+Learn how to create a thumbnail image.
+        </p>
+        <hr>
+        <h2>Thumbnail Image</h2>
+        <p>A thumbnail is a small image that represents a larger image (when clicked on), and is often recognized with a border around it:</p>
+<a target="_blank" href="../../../../../ass/png/w3-img_mountains.jpg">
+  <img src="../../../../../ass/png/w3-img_mountains.jpg" alt="Forest">
+</a> 
+<hr>
+<h2>How To Create a Thumbnail Image</h2>
+<p>Use an &lt;img&gt; element and wrap an &lt;a&gt; element around it. Style the image with a border and add a hover effect:</p>
+<h4>Example</h4>
+<div class="oi">
+        <pre class="prettyprint">
+&lt;style&gt;
+img {
+  border: 1px solid #ddd; /* Gray border */
+  border-radius: 4px;  /* Rounded border */
+  padding: 5px; /* Some padding */
+  width: 150px; /* Set a small width */
+}
+
+/* Add a hover effect (blue shadow) */
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+&lt;/style&gt;
+&lt;body&gt;
+
+&lt;a target="_blank" href="img_forest.jpg"&gt;
+  &lt;img src="img_forest.jpg" alt="Forest"&gt;
+&lt;/a&gt;
+
+&lt;/body&gt; 
+        </pre>
+</div>
+</div>
+</body>
+<script src="../../../../../ass/api/code-prettify/loader/run_prettify.js"></script>
+</html>

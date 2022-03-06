@@ -3,14 +3,15 @@
 <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
-            <link rel="stylesheet" href="../../../ass/css/index.css">
-            <link rel="stylesheet" href="../../../ass/font/css/all.css">
+            <link rel="stylesheet" href="../../../../../ass/css/index.css">
+            <link rel="stylesheet" href="../../../../../ass/font/css/all.css">
         <title>docs wiki</title>
         <style>
+
 </style>
 </head>
 <body>
-        <div class="navbar">
+<div class="navbar">
         <a href="index.html"><i class="fa-solid fa-terminal"></i> Home</a>
         <a href="wiki/coding/index.html">coding</a>
         <a href="wiki/english/index.html">english</a>
@@ -23,17 +24,14 @@
         <a href="wiki/tech/index.html">tech</a>
         <a href="wiki/wikis/index.html">wikis</a>
 </div>
-<template type="markdown">
-        = internet =
-  </template>
-</body>
-<script src="https://cdn.bootcss.com/marked/0.3.6/marked.min.js" charset="utf-8"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js" charset="utf-8"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/languages/javascript.min.js" charset="utf-8"></script>
-<script src="../../../ass/js/md_html.min.js" charset="utf-8"></script>
-<script type="text/javascript">
-  markedInHtml.init()
-</script>
-
+<h1>Screen brightness to bright (xorg)</h1>
+<p>the minimum brightness level is too bright and xbacklight is not working </p>
+<h2>command</h2>
+<pre>xrandr --output eDP-1 --brightness 0.8 </pre>
+<h2>command break down</h2>
+<p>--brightness "0.8" - change this to increase or decrease brightness</p>
+<p>--output "eDP-1" - change this to your monitor</p>
+<p>to find the monitor output run command</p>
+<pre>xrandr | grep -P "($SCREEN)" | awk '{print $1}' | sed -n 2p</pre>
 </body>
 </html>

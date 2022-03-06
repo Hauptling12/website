@@ -6,10 +6,10 @@
 ##### w3 school
 ###### how to
 ####### in progress
-file:///home/chief/my-work/dev/web-wiki/wiki/coding/html/w3/how_to/smooth_scroll.html
-file:///home/chief/my-work/dev/web-wiki/wiki/coding/html/w3/how_to/syntax_highlighter.html
-file:///home/chief/my-work/dev/web-wiki/wiki/coding/html/w3/how_to/side_navigation.html
-file:///home/chief/my-work/dev/web-wiki/wiki/coding/html/w3/how_to/shapes.html
+wiki/coding/html/w3/how_to/smooth_scroll.html
+wiki/coding/html/w3/how_to/syntax_highlighter.html
+wiki/coding/html/w3/how_to/side_navigation.html
+wiki/coding/html/w3/how_to/shapes.html
 
 ### english
 
@@ -17,9 +17,10 @@ file:///home/chief/my-work/dev/web-wiki/wiki/coding/html/w3/how_to/shapes.html
 
 
 ### tech
-## linux
-### busy box (done)
-                
+### linux
+#### busy box (done)
+#### software (done)
+#### hardware
 ### server
 
 ### science

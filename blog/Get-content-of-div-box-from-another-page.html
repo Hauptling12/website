@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta charset="UTF-8">
+		<title>Get content of div box from another page</title>
+		<meta name="description" content="Get content of div box from another page using html">
+		<link rel="stylesheet" href="https://hauptling12.github.io/website/asset/index.css">
+		<link rel="stylesheet" href="https://hauptling12.github.io/website/asset/blog.css">
+		<link rel="stylesheet" href="https://hauptling12.github.io/website/asset/bootstrap.min.css">
+		<script src="https://hauptling12.github.io/website/asset/coding-prettify/loader/run_prettify.js"></script>
+</head>
+<body style="background-color: black;">
+	<nav class="navbar">
+		<div class="logo"><a class="logo-url" href="https://hauptling12.github.io/website/">Hauptling12</a></div>
+			<ul class="nav-links">
+					<input type="checkbox" id="checkbox_toggle" />
+					<label for="checkbox_toggle" class="hamburger">&#9776;</label>
+					<div class="menu">
+							<li><a href="https://hauptling12.github.io/website/web/index.html">web utils</a></li>
+							<li><a href="https://hauptling12.github.io/website/software/index.html">software</a></li>
+							<li><a href="https://github.com/Hauptling12"><i class='bx bxl-github' ></i></a></li>
+							<li><a href="https://hauptling12.github.io/website/blog">blog</a></li>
+							<li><a href="https://hauptling12.github.io/website/about.html">about</a></li>
+							<li class="services">
+									<a href="/"></a>
+									<ul class="dropdown">
+											<li><a href="/"></a></li>
+									</ul>
+							</li>
+					</div>
+			</ul>
+	</nav>
+	<div class="container mt-5">
+		<div class="row main-section">
+			<div class="col-sm-12 col-md-9 col-lg-9">
+				<div class="card rounded-0 shadow-sm" >
+					<div class="card-body">
+						<h2 class="card-title">Get content of div box from another page</h2>
+						<p>The div is located at <code>webpage.com/test.html</code> and div ID is "div-test".</p>
+						<p>To display the div on another webpage like <code>webpage.com/folder/page.html</code></p>
+						<h4>The code</h4>
+						<h6>test.html</h6><hr>
+						<pre class="prettyprint lang-html">
+						&lt;!DOCTYPE html&gt;
+						&lt;html&gt;
+						&lt;head&gt;
+						&lt;/head&gt;
+						&lt;body&gt;
+						&lt;div id="div-test"&gt;
+						&lt;p&gt;Aut dolorem dignissimos assumenda voluptatem tenetur recusandae. Ut et qui rerum eos optio rerum.
+						Aperiam architecto eos aut molestias. Non asperiores aliquam quo qui labore cum.
+						Mollitia beatae iste expedita explicabo aut. Perspiciatis facere aliquam iste sint. Sapiente aut itaque dolorum ut quis aut.
+						Iste adipisci in occaecati. Molestiae eligendi et ea nisi.
+						Eum quibusdam nulla officiis. Corporis nostrum sint deserunt doloremque. Iusto asperiores omnis ducimus voluptatem consequuntur qui minus.
+						Occaecati libero dicta ex voluptatem harum. Cumque aspernatur ut sapiente.&lt;/p&gt;
+						&lt;/div&gt;
+						&lt;/body&gt;
+						&lt;/html&gt;
+						</pre>
+						<h6>page.html</h6><hr>
+						<pre class="prettyprint lang-html">
+						&lt;div id="div1"&gt;&lt;/div&gt;
+						&lt;script&gt;
+						$("#div1").load("test.html #div-test");
+						&lt;/script&gt;
+						</pre>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-3 col-lg-3">
+                    <div class="card rounded-0 shadow-sm">
+                        <div class="card-header">
+                            Category
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a href="https://hauptling12.github.io/website/blog/tech.html">tech</a></li>
+                            <li class="list-group-item"><a href="https://hauptling12.github.io/website/blog/coding.html">coding</a></li>
+                            <li class="list-group-item"><a href="https://hauptling12.github.io/website/blog/software.html">software</a></li>
+                            <li class="list-group-item"><a href="https://hauptling12.github.io/website/blog/linux.html">linux</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+<html>

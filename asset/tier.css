@@ -1,0 +1,186 @@
+html {
+	height: 100%;
+}
+body {
+	margin:0;
+
+}
+.navbar {
+	position: sticky;
+	z-index: 10;
+	top: 0px;
+	width: 100%;
+	box-sizing: border-box;
+
+}
+.header {
+	display: flex;
+	border-width: 0;
+	border-style: solid;
+	width: 100%;
+	flex-direction: row;
+	line-height: 32px;
+	height:64px;
+	background-color: #002626;
+	color: white;
+	margin: 0;
+	align-items: center;
+}
+.header-span {
+	padding: 0 16px;
+	line-height: 16px;
+	font-size: 25px;
+	font-weight: 500;
+}
+.header-link {
+	gap: .75rem;
+	display: flex;
+	align-items: center;
+	height:64px;
+	flex-direction: row;
+	width: 100%;
+	padding: 0 16px;
+	box-sizing: border-box;
+}
+.header-link a {
+	position: relative;
+	cursor: pointer;
+	border-radius: 4px;
+	box-sizing: border-box;
+	text-decoration: none;
+	line-height: 36px;
+	margin: 0;
+	display: inline-block;
+}
+.header-link button {
+	box-sizing: border-box;
+	position: relative;
+	user-select: none;
+	display: inline-block;
+	text-decoration: none;
+	margin: 0;
+	padding: 0 16px;
+	-webkit-appearance: button;
+	color: inherit;
+	background: rgba(0,0,0,0);
+	text-decoration: center;
+	min-width: 64px;
+	line-height: 36px;
+	border-radius: 4px;
+}
+.tier {
+	height: 100%;
+	flex-direction: column;
+	position: relative;
+	display: flex;
+
+}
+.great {
+	display: flex;
+}
+.great .tsub1 {
+	background-color: red;
+	width: 7rem;
+	height:7rem;
+	font-size: 2.25rem;
+	align-items: center;
+	padding: 1rem;
+}
+.great .tsub2 {
+	background-color: black;
+	padding: 1rem;
+	flex-grow: 1;
+	gap: .75rem;
+	align-items: center;
+}
+.good {
+	display: flex;
+}
+.good .tsub1 {
+	background-color:orange;
+	width: 7rem;
+	height:7rem;
+	font-size: 2.25rem;
+	align-items: center;
+	padding: 1rem;
+}
+.good .tsub2 {
+	background-color: black;
+	padding: 1rem;
+	flex-grow: 1;
+	gap: .75rem;
+	align-items: center;
+}
+.ok {
+	display: flex;
+}
+.ok .tsub1 {
+	background-color:yellow;
+	width: 7rem;
+	height:7rem;
+	font-size: 2.25rem;
+	align-items: center;
+	padding: 1rem;
+}
+.ok .tsub2 {
+	background-color: black;
+	padding: 1rem;
+	flex-grow: 1;
+	gap: .75rem;
+	align-items: center;
+}
+.meh {
+	display: flex;
+}
+.meh .tsub1 {
+	background-color:green;
+	align-items: center;
+	width: 7rem;
+	height:7rem;
+	font-size: 2.25rem;
+	padding: 1rem;
+}
+.meh .tsub2 {
+	background-color: black;
+	padding: 1rem;
+	flex-grow: 1;
+	gap: .75rem;
+	align-items: center;
+}
+.yuck {
+	display: flex;
+}
+.yuck .tsub1 {
+	background-color:blue;
+	width: 7rem;
+	height:7rem;
+	font-size: 2.25rem;
+	align-items: center;
+	padding: 1rem;
+}
+.yuck .tsub2 {
+	background-color: black;
+	padding: 1rem;
+	flex-grow: 1;
+	gap: .75rem;
+	align-items: center;
+}
+#inp {
+	display: inline-block;
+	position: relative;
+	text-align: left;
+	width: 100%;
+	font-size: inherit;
+	padding-bottom: 1.34375em;
+	align-items: baseline;
+	margin: -4;
+}
+.main {
+	width: 100%;
+	height: 100%;
+}
+.main-items {
+	background-color: maroon;
+	height: 100%;
+	width: 100%;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8">
+		<title>Tier List</title>
+		<!-- <link rel="stylesheet" href="https://hauptling12.github.io/website/asset/tier.css"> -->
+		<link rel="stylesheet" href="../asset/tier.css">
+		<script src="../asset/tier.js" charset="utf-8"></script>
+</head>
+<body>
+	<div style="width:100%;height:100%">
+		<div class="navbar">
+			<div class="header">
+				<div class="header-span"><span><b>Tier List</b></span></div>
+			</div>
+			<div class="header-link">
+				<a>Home</a>
+				<button><span>About</span></button>
+			</div>
+		</div>
+		<div class="main">
+			<div class="input">
+				<input type="text" placeholder="New Item" id="inp">
+			</div>
+			<div class="tier">
+				<div class="great">
+					<div class="tsub1"><p>great</p></div>
+					<div id="div1" class="tsub2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				</div>
+				<div class="good">
+					<div class="tsub1"><p>good</p></div>
+					<div id="div1" class="tsub2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				</div>
+				<div class="ok">
+					<div class="tsub1"><p>ok</p></div>
+					<div id="div1" class="tsub2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				</div>
+				<div class="meh">
+					<div class="tsub1"><p>meh</p></div>
+					<div id="div1" class="tsub2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				</div>
+				<div class="yuck">
+					<div class="tsub1"><p>yuck</p></div>
+					<div id="div1" class="tsub2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				</div>
+			</div>
+			<div class="main-items" id="items"></div>
+		</div>
+	</div>
+	<script>
+var input = document.getElementById("inp");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    addtier()
+  }
+});
+	</script>
+</body>
+<html>
